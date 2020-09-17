@@ -1,0 +1,240 @@
+ <!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Heroes Cards</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css'>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css ">
+  <link rel="stylesheet" href="./style.css"> 
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+  <section>
+ <!--<div class="fog-2">
+    <div class="img-area thing1"></div>
+    <div class="img-area thing2"></div>
+  </div>--> 
+  <header>
+    <a href="#" class="logo"><img src="img/DC_Comics_logo.png"></a>
+  </header>
+  <div id="player">
+    <div id="songTitle">Demo</div>
+    <div id="buttons">
+        <button id="pre" onclick="pre()"><img src="img/previous.png" height="70%" width="70%"/></button>
+        <button id="play" onclick="playOrPauseSong()"><img src="img/pause.png" height="90%" width="90%"/></button>
+        <button id="next" onclick="next()"><img src="img/next.png" height="70%" width="70%"/></button>
+    </div>
+    <div id="seek-bar">
+      <div id="fill"></div>
+      <div id="handle"></div>
+    </div>
+    <div id="currentTime">00:00/00:00</div>
+    <div id="volume">
+      <button id="decrease" onclick="decreaseVolume()" >-</button>
+      <div id="volumeIcon"><img src="img/speaker.png" height="8%" width="8%"></div>
+      <button id="increase" onclick="increaseVolume()" >+</button>
+    </div>
+  </div> <!--end player-->
+  <div class="slide-container">
+   
+    
+    <div class="wrapper">
+      <div class="clash-card batman" id="bat">         
+        <div class="clash-card__image clash-card__image--batman">
+          <img src="img/batman3.png" alt="batman" id="batman" /> 
+            
+        </div>
+        
+        <div class="clash-card__level clash-card__level--batman">Original</div>
+        <div class="clash-card__unit-name">Batman</div>
+        <div class="clash-card__unit-description">      
+          Batman is one of the first superheroes in comics. With incredible intelligence, he fights crimes in Gotham City. Member and founder of the Justice League.
+        </div>
+
+        <div class="clash-card__unit-stats clash-card__unit-stats--batman clearfix">
+          <div class="one-vilan">
+            <div class="stat-vilan">Mortal Vilain</div>
+            <div class="stat-name">Joker</div>
+          </div>
+          <div class="one-third">
+            <div class="stat">80</div>
+            <div class="stat-value">Force</div>
+          </div>
+
+          <div class="one-third">
+            <div class="stat">90</div>
+            <div class="stat-value">Brain</div>
+          </div>
+
+          <div class="one-third no-border">
+            <div class="stat">70</div>
+            <div class="stat-value">Speed</div>
+          </div>
+
+        </div> <!---Fechamento da div clash-card__unit-stats 
+          clash-card__unit-stats--batman clearfix" -->
+
+      </div> <!-- end clash-card batman-->
+    </div> <!-- end wrapper -->
+    
+   <div class="wrapper">
+      <div class="clash-card superman" id="super">
+        <div class="clash-card__image clash-card__image--superman">
+          <img src="img/superman6.png" alt="superman" id="superman" />
+            
+        </div>
+        <div class="clash-card__level clash-card__level--superman">Original</div>
+        <div class="clash-card__unit-name">Superman</div>
+        <div class="clash-card__unit-description">
+          Superman is a comic book icon, one of the first superheroes. He's an alien from Krypton, come to earth as a refugee. Its powers include super-strength, heat vision and flight.
+        </div>
+
+        <div class="clash-card__unit-stats clash-card__unit-stats--superman clearfix">
+          <div class="one-vilan">
+            <div class="stat-vilan">Mortal Vilain</div>
+            <div class="stat-name">Lex-Luthor</div>
+          </div>
+          <div class="one-third">
+            <div class="stat">100</div>
+            <div class="stat-value">Force</div>
+          </div>
+
+          <div class="one-third">
+            <div class="stat">75</div>
+            <div class="stat-value">Brain</div>
+          </div>
+
+          <div class="one-third no-border">
+            <div class="stat">90</div>
+            <div class="stat-value">Speed</div>
+          </div>
+
+        </div> 
+
+     </div> <!-- end clash-card superman-->
+   </div> <!-- end wrapper -->
+    
+    <div class="wrapper">
+      <div class="clash-card flash">
+        <div class="clash-card__image clash-card__image--flash">
+          <img src="img/flash9.png" alt="flash" id="flash" />
+           
+        </div>
+        <div class="clash-card__level clash-card__level--flash">Original</div>
+        <div class="clash-card__unit-name">Flash</div>
+        <div class="clash-card__unit-description">
+          Flash is the fastest comic book hero. It makes it infinitely fast, impossible to be calculated. There are several alternative versions of Héroi. Its greatest power is the infinite mass punch.
+        </div>
+
+        <div class="clash-card__unit-stats clash-card__unit-stats--flash clearfix">
+          <div class="one-vilan">
+            <div class="stat-vilan">Mortal Vilain</div>
+            <div class="stat-name">Reverse Flash</div>
+          </div>
+          <div class="one-third">
+            <div class="stat">F=ma</div>
+            <div class="stat-value">Force</div>
+          </div>
+
+          <div class="one-third">
+            <div class="stat">85</div>
+            <div class="stat-value">Brain</div>
+          </div>
+
+          <div class="one-third no-border">
+            <div class="stat">-</div>
+            <div class="stat-value">Speed</div>
+          </div>
+        </div> 
+
+      </div> <!-- end clash-card flash-->
+    </div> <!-- end wrapper -->
+    
+   <div class="wrapper">
+      <div class="clash-card lantern">
+        <div class="clash-card__image clash-card__image--lantern">
+          <img src="img/lanterna1.png" alt="lantern" id="lantern" />
+           
+        </div>
+        <div class="clash-card__level clash-card__level--lantern">Original</div>
+        <div class="clash-card__unit-name">Green Lantern</div>
+        <div class="clash-card__unit-description">       
+          "On the brightest day, on the most dense night, evil will succumb before my presence. Anyone who will worship evil will suffer when the troop of green lanterns face it."
+        </div>
+        <div class="clash-card__unit-stats clash-card__unit-stats--lantern clearfix">
+          <div class="one-vilan">
+            <div class="stat-vilan">Mortal Vilain</div>
+            <div class="stat-name">Parallax</div>
+          </div>
+          <div class="one-third">
+            <div class="stat">80</div>
+            <div class="stat-value">Force</div>
+          </div>
+
+          <div class="one-third">
+            <div class="stat">75</div>
+            <div class="stat-value">Brain</div>
+          </div>
+
+          <div class="one-third no-border">
+            <div class="stat">75</div>
+            <div class="stat-value">Speed</div>
+          </div>
+
+        </div> 
+
+      </div> <!-- end clash-card lantern-->
+    </div><!-- end wrapper -->
+    
+    <div class="wrapper">
+      <div class="clash-card darkseid">
+        <div class="clash-card__image clash-card__image--darkseid">
+          <img src="img/darkseid2.png" alt="darkseid" id="darkseid"/>
+          
+        </div>
+        <div class="clash-card__level clash-card__level--darkseid">Original</div>
+        <div class="clash-card__unit-name">Darkseid</div>
+        <div class="clash-card__unit-description">
+          Darkseid is the king of Apokolips, the planet hell. He is the greatest enemy of the justice league. It has the omega sanction as its ally and its greatest power is the omega rays, which are able to chase the enemy.
+        </div>
+
+        <div class="clash-card__unit-stats clash-card__unit-stats--darkseid clearfix">
+          <div class="one-vilan">
+            <div class="stat-vilan">Mortal Vilain</div>
+            <div class="stat-name">Anti-Monitor</div>
+          </div>
+          <div class="one-third">
+            <div class="stat">95</div>
+            <div class="stat-value">Force</div>
+          </div>
+
+          <div class="one-third">
+            <div class="stat">85</div>
+            <div class="stat-value">Brain</div>
+          </div>
+
+          <div class="one-third no-border">
+            <div class="stat">75</div>
+            <div class="stat-value">Speed</div>
+          </div>
+
+        </div> 
+
+      </div> <!-- end clash-card darkseid-->
+    </div> <!-- end wrapper -->
+    
+  </div> <!-- end container -->
+  <!-- partial -->
+  
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script>
+<script  src="./script.js"></script>
+</section>
+
+</body>
+<script src="player.js "></script>
+</html>
